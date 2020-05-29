@@ -8,8 +8,33 @@
 <body>
 
     <div class="container">
-        <h1>Movie Swag</h1>
+        <h1>Goodbye World!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>
+        <table id="products">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody id="output">
+                
+            </tbody>
+            <tbody id="insertProducts"></tbody>
+        </table>
+
+
+
+
+        <form>
+            <label for="inputTitle">Title:</label><br>
+            <input type="text" id="inputTitle" name="inputTitle"><br>
+            <label for="inputRating">Last name:</label><br>
+            <input type="text" id="inputRating" name="inputRating"><br>
+            <button id="movieSubmit">Add Movie</button>
+            <button id="movieDelete"> Delete Movie</button>
+        </form> 
     </div>
 
     <script src="./main.js"></script>
