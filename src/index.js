@@ -53,13 +53,33 @@ $(document).on('click','.deleteButton', function() {
 //edit function...Still not working
 $(document).on('click','.editButton', function() { 
   var id = this.id.slice(4);
-  console.log(id);
+  // console.log(id);
+  editId = id;
+  getMovie(id);
   $.ajax("/api/movies/"+id, {
     type: "PUT"
   }).done(function(done) {
     getMovieList();
   });
 });
+
+$(document).on('click','#editMovie', function(e) { 
+  e.preventDefault();
+  var title = $("#inputTitle").val();
+  var rating = $("#inputRating").val();
+  console.log("Running edit -- Title/Rating: " + title + "/" + rating);
+  $.ajax("/api/movies/"+editId, {
+    type: "PUT",
+    data: {
+        "title": title,
+        "rating": rating
+    }
+  }).done(function(done) {
+    getMovieList();
+  });
+});
+
+getMovieList();
 
 
 // add function
@@ -89,9 +109,7 @@ document.onreadystatechange = function () {
        document.getElementById('contents').style.visibility="hidden";
   } else if (state == 'complete') {
       setTimeout(function(){
-         document.getElementById('interactive');
          document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
       },1000);
   }
 }
