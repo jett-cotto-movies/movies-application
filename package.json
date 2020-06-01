@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently 'webpack-dev-server' 'json-server -d1200 --watch db.json'",
-    "build": "webpack -p",
+    "build": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -16,12 +16,14 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.5.2",
+    "bootstrap": "^3.4.1",
     "concurrently": "^3.5.0",
+    "jquery": "3.5.1",
     "json-server": "^0.16.1",
     "promise-polyfill": "^6.0.2",
     "webpack": "4.29.6",
-    "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.2.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
     "whatwg-fetch": "^3.0.0"
   }
 }

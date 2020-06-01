@@ -1,49 +1,24 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "Casablanca",
-      "rating": "",
-      "id": 3
-    },
-    {
-      "title": "Casablanca",
-      "rating": "",
-      "id": 4
-    },
-    {
-      "title": "Casablanca",
-      "rating": "",
-      "id": 5
-    },
-    {
-      "title": "Casablanca",
-      "rating": "",
-      "id": 6
-    },
-    {
-      "title": "",
-      "rating": "",
-      "id": 7
-    },
-    {
-      "title": "Friday",
-      "rating": "",
-      "id": 8
-    },
-    {
       "title": "Childs Play",
       "rating": "",
       "id": 9
+    },
+    {
+      "title": "Goldfinger",
+      "rating": "5",
+      "id": 10
+    },
+    {
+      "title": "Finding Nemo",
+      "rating": "3.5",
+      "id": 11
+    },
+    {
+      "title": "The Incredibles",
+      "rating": "5",
+      "id": 12
     }
   ]
 }
