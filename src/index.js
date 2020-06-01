@@ -11,7 +11,7 @@ const $ = require('jquery');
 const {getMovies} = require('./api.js');
 var output = $("#output");
 var submitButton = $("#movieSubmit");
-
+var editId;
 
 // display movies function
 function getMovieList() {
@@ -37,6 +37,8 @@ function getMovieList() {
   });
 }
 
+
+
 // delete function
 $(document).on('click','.deleteButton', function() { 
   var id = this.id.slice(6);
@@ -48,8 +50,7 @@ $(document).on('click','.deleteButton', function() {
 });
 
 
-
-//edit function
+//edit function...Still not working
 $(document).on('click','.editButton', function() { 
   var id = this.id.slice(4);
   console.log(id);
@@ -79,3 +80,18 @@ submitButton.click(function(e) {
 });
 
 getMovieList();
+
+
+//Start and stop spin on loading animation...
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
